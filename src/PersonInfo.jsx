@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 const PersonInfo = () => {
+    const [message, setMessage] = useState("");
+
+    const handleClick = () => {
+        setMessage("Сообщение йоуу");
+    };
+
     return (
         <div>
-            <h1>Alym Yrysmamatov</h1>
+            <h1>Alym Yrysmamtov</h1>
             <p>Должность: Junior Developer</p>
             <p>Компания: Mega</p>
             <ul>
@@ -11,7 +17,9 @@ const PersonInfo = () => {
                 <li>Образование: Бакалавр информатики</li>
                 <li>Навыки: React, Node.js, Java</li>
             </ul>
-            <button>Кликни меня</button>
+            {message && <p>{message}</p>}
+            <button onClick={handleClick}>Повысить в должности</button>
+
         </div>
     );
 };
