@@ -11,6 +11,7 @@ const PersonInfo = () => {
                 <li>Образование: Бакалавр информатики</li>
                 <li>Навыки: React, Node.js, Java</li>
             </ul>
+            <button>Кликни меня</button>
         </div>
     );
 };
